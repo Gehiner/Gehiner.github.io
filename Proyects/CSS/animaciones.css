@@ -1,0 +1,71 @@
+:root{
+    --bright-pink-crayola: #ef476fff;
+    --sunglow: #ffd166ff;
+    --emerald: #06d6a0ff;
+    --blue-ncs: #118ab2ff;
+    --midnight-green: #073b4cff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--sunglow);
+}
+main{
+    width: 100%;
+    height: auto;
+}
+.animations div{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+.traslate{
+    background-color: var(--blue-ncs);
+}
+.traslate:hover{
+    transform: translate(30px, 20px);
+}
+.Rotate{
+    background-color: var(--bright-pink-crayola);
+}
+.Rotate:hover{
+    transform: rotate(30deg);
+}
+.Scale{
+    background-color: var(--emerald);
+    
+}
+.Scale:hover{
+    will-change: transform;
+    transform: scale(1.5);
+}
+.skew{
+    background-color: var(--midnight-green);
+}
+.skew:hover{
+    transform: skew(10deg,40deg);
+    transform-style: preserve-3d;
+}
+.visibility{
+    position: relative;
+    transform-style: preserve-3d;
+}
+.visibility:hover {
+    transform: rotateX(180deg);
+}
+.animations .visibility div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+.visibility .visibility-1{
+    background-color: var(--blue-ncs);
+}
+.visibility .visibility-2{
+    background-color: var(--bright-pink-crayola);
+    transform: rotateY(180deg);
+}
