@@ -1,5 +1,4 @@
-.desktop-menu{
-    width: 150px;
+body .desktop-menu{
     height: auto;
     position: absolute;
     top: 60px;
@@ -7,6 +6,8 @@
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
+    background-color: var(--white);
+    z-index: 40;
 }
 
 .desktop-menu ul{

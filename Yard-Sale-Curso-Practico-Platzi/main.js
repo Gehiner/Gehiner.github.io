@@ -7,6 +7,9 @@ function toggleMenuDesktop(){
     if(!aside.classList.contains("inactive")){
         aside.classList.toggle("inactive")
     } 
+    if(!productDetailContainer.classList.contains("inactive")){
+        productDetailContainer.classList.toggle("inactive")
+    }
     desktopMenu.classList.toggle("inactive");
 }
 
@@ -19,6 +22,9 @@ function toggleMenuMobile(){
     if(!aside.classList.contains("inactive")){
         aside.classList.toggle("inactive")
     } 
+    if(!productDetailContainer.classList.contains("inactive")){
+        productDetailContainer.classList.toggle("inactive")
+    }
     menuMobile.classList.toggle("inactive");
 }
 
@@ -34,6 +40,9 @@ function toggleMenuCarrito(){
     }
     if(!desktopMenu.classList.contains("inactive")){
         desktopMenu.classList.toggle("inactive");
+    } 
+    if(!productDetailContainer.classList.contains("inactive")){
+        productDetailContainer.classList.toggle("inactive")
     } 
     aside.classList.toggle("inactive")
 }
@@ -53,6 +62,9 @@ function renderProducts(arr){
         productCard.classList.add("product-card");
         const image=document.createElement("img");
         image.setAttribute("src", product.image);
+
+        image.addEventListener("click", showProductDetail);
+
         const productInfo= document.createElement("div");
         productInfo.classList.add("product-info");
     
@@ -81,4 +93,26 @@ function renderProducts(arr){
 
 for(let i = 0;i<15;i++){
     renderProducts(productList);
+}
+
+const productDetailContainer=document.querySelector(".product-details")
+function showProductDetail(){
+    if(!menuMobile.classList.contains("inactive")){
+        menuMobile.classList.toggle("inactive");
+    }
+    if(!desktopMenu.classList.contains("inactive")){
+        desktopMenu.classList.toggle("inactive");
+    } 
+    if(!aside.classList.contains("inactive")){
+        aside.classList.toggle("inactive")
+    } 
+
+    productDetailContainer.classList.remove("inactive");
+}
+
+const iconCloseDetailProducts=document.querySelector(".product-details-close");
+iconCloseDetailProducts.addEventListener("click", closeDetailProducts)
+
+function closeDetailProducts(){
+    productDetailContainer.classList.add("inactive");
 }

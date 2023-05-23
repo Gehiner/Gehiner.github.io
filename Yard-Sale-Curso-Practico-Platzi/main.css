@@ -16,7 +16,26 @@
 }
 header{
     position: relative;
+    z-index: 600;
 }
-header .inactive{
+body .inactive{
     display: none;
+}
+
+
+@media (max-width: 640px) {
+    header .product-detail {
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid var(--very-light-pink);
+    }
+    body .product-details{
+        width: 100%;
+        border-bottom: 1px solid var(--very-light-pink);
+        border-radius: 0px;
+    }
+    body .product-details > img:nth-child(2),.product-details-close{
+        border-radius: 0px;
+    }
 }

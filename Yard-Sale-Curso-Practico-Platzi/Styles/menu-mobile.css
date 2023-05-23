@@ -1,4 +1,5 @@
 .mobile-menu{
+    width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
@@ -6,6 +7,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--white);
+    z-index: 30;
 }
 .mobile-menu .categorias{
     border-bottom:1px solid var(--very-light-pink);

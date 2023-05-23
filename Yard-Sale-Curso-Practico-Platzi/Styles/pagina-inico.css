@@ -1,5 +1,6 @@
 .main-container{
     margin-top: 20px;
+    position: relative;
 }
 .cards-container{
     display: grid;
