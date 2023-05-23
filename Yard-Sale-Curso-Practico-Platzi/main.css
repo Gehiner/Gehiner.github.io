@@ -17,6 +17,6 @@
 header{
     position: relative;
 }
-.inactive{
+header .inactive{
     display: none;
 }

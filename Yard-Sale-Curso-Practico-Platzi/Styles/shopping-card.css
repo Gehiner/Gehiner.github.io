@@ -38,7 +38,7 @@
     background-color: var(--text-input-field);
     margin-bottom: 24px;
     border-radius: 8px;
-    padding: 0 24px;
+    padding:24px 24px;
   }
   .order p:nth-child(1) {
     display: flex;

@@ -1,4 +1,7 @@
 .mobile-menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
     padding: 24px;
     height: 100vh;
     display: flex;
