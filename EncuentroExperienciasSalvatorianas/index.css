@@ -35,6 +35,9 @@ main h2{
     font-size: 3.2rem;
     margin: 0px;
 }
+main h3{
+    font-size: 1.8rem;
+}
 main img{
     width: 200px;
 }
